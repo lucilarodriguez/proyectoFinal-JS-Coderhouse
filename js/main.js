@@ -11,3 +11,14 @@ function agregarSalida(texto) {
     
 }
 
+
+//jQuery
+
+function verCaja(selector){
+    $(selector).show();
+}
+function ocultarCaja(selector){
+    $(selector).hide(); 
+}
+
+
