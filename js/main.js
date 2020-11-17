@@ -1,24 +1,53 @@
-function getDatosPersonales() {
-    let input1 = document.getElementById("nombre").value;
-    let input2 = document.getElementById("tipoPC").value;
-    agregarSalida("Hola "+input1+" tu elección fue: "+input2);
+.item {
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 20px;
 }
 
-function agregarSalida(texto) {
-    let salida = document.createElement("p");
-    salida.textContent =texto;
-    document.getElementById("contenedorInput").appendChild(salida);
-    
+.item-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
 }
 
-
-//jQuery
-
-function verCaja(selector){
-    $(selector).show();
-}
-function ocultarCaja(selector){
-    $(selector).hide(); 
+.item-image {
+  height: 300px;
+  width: 100%;
 }
 
+.item-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px 15px;
+}
 
+.item-details > .item-price {
+  margin: 0;
+}
+
+/* ? SHOPPING CART */
+.shopping-cart-items {
+  padding: 20px 0px;
+}
+
+.shopping-cart-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.shopping-cart-image {
+  max-width: 80px;
+  border-radius: 20px;
+}
+
+.shopping-cart-quantity-input {
+  max-width: 45px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #eee;
+  padding: 5px;
+}
+
+.shopping-cart-total {
+  min-height: 96px;
+}
