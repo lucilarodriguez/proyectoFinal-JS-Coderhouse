@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1ec58676-898f-4fa5-9fcf-1f386dda4724",
+    "title": "Silla respaldo en cruz",
+    "price": 2400,
+    "image": "silla-cruz.jpg"
+  },
+  {
+    "id": "420bad3c-974e-4749-9e35-7ea303320e93",
+    "title": "Silla respaldo imperial",
+    "price": 2400,
+    "image": "silla-imperial.jpg"
+  },
+  {
+    "id": "bb5c95a2-f1d3-44ad-bafd-3ebd7bdbcaa9",
+    "title": "Silla respaldo en fajas",
+    "price": 2400,
+    "image": "silla-fjas.jpg"
+  },
+  {
+    "id": "8655bd50-c30c-476c-81e4-ce78a0298a52",
+    "title": "Silla respaldo bastones de hierro",
+    "price": 2400,
+    "image": "silla-hierro.jpg"
+  },
+  {
+    "id": "12b06f0e-7a73-4b0c-b70d-ddb614eb60a8",
+    "title": "Mesa de luz tono nogal",
+    "price": 3200,
+    "image": "mesa-luz.jpg"
+  },
+  {
+    "id": "df72e507-7988-451a-9e20-0cf3ef3a52af",
+    "title": "Banqueta alta con respaldo",
+    "price": 2600,
+    "image": "banqueta-alta.jpg"
+  }
+]

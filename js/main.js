@@ -1,53 +1,43 @@
-.item {
-  border: 2px solid #000;
-  padding: 10px;
-  border-radius: 20px;
+//Conexión con el json con un fetch
+
+const serverUrl = 'http://127.0.0.1:5500/';
+const itemsPath = 'mock/items.json';
+const imagesPath = 'img/';
+
+window.onload = getData();
+
+const items = document.querySelector('.items');
+
+function getData() {
+    fetch(`${serverUrl}${itemsPath}`)
+        .then((res) => res.json())
+        .then((data) => printData(data));
 }
 
-.item-title {
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 600;
+//Se pintan los artículos de forma dinámica
+
+function printData(data) {
+    const itemContainer = document.createElement('div')
+    itemContainer.className = 'row';
+
+    data.forEach(item => {
+        itemContainer.innerHTML += createDomElemnt(item)
+        items.append(itemContainer)
+    });
 }
 
-.item-image {
-  height: 300px;
-  width: 100%;
-}
+function createDomElemnt(item) {
+    const itemHtml = ` 
+    <div class="col-12 col-md-6">
+        <div class="item shadow mb-4 card">
+            <h3 class="item-title">${item.title}</h3>
+            <img class="item-image col-md-10 mx-auto d-block" src=${serverUrl}${imagesPath}${item.image}>
 
-.item-details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0px 15px;
-}
-
-.item-details > .item-price {
-  margin: 0;
-}
-
-/* ? SHOPPING CART */
-.shopping-cart-items {
-  padding: 20px 0px;
-}
-
-.shopping-cart-header {
-  border-bottom: 1px solid #ccc;
-}
-
-.shopping-cart-image {
-  max-width: 80px;
-  border-radius: 20px;
-}
-
-.shopping-cart-quantity-input {
-  max-width: 45px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: #eee;
-  padding: 5px;
-}
-
-.shopping-cart-total {
-  min-height: 96px;
+            <div class="item-details p-4">
+                <h4 class="item-price">$${item.price}</h4>
+                <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+            </div>
+        </div>
+    </div>`
+    return itemHtml;
 }
